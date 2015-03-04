@@ -3,6 +3,8 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/includes/globals.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/index.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/mail.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/add_file.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/index.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/password.php5" charset="ISO-8859-1" />
   </component>
