@@ -67,7 +67,7 @@
 </table>
 <center>
 <div id="footer" align="center">
-	<b>Site rÃ©alisÃ© par Cyril Gantin</b>
+	<b>Site réalisé par Cyril Gantin</b>
 </div>
 </center>
 </body>
