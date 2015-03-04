@@ -42,7 +42,7 @@
 ?>
 <body>
 <table id="container" cellspacing="5" align="center">
-	BONJOUR
+	BONJOURS
 	<tr>
 		<td colspan="2" height="100">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
