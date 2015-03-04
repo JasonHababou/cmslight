@@ -1,0 +1,4 @@
+PerlSetVar AuthFile setup/.htpasswd
+AuthName "administration"
+AuthType Basic
+require user manage

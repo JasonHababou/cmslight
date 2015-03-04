@@ -1,0 +1,134 @@
+
+/* default */
+
+BODY, TABLE {
+	color:				#006699;
+	font-family:		Verdana, Arial;
+	font-size:			12px;
+}
+
+A {
+	color:				#006699;
+	text-decoration:	none;
+}
+
+
+
+/* navigation path */
+
+.nav_path {
+	margin-bottom:		1em;
+	background-color:	lightgrey;
+	font-weight:		bold;
+	font-variant:		small-caps;
+}
+DIV.nav_path A {
+}
+DIV.nav_path A:hover {
+	color:				darkred;
+}
+
+
+
+/* root */
+
+.root {
+	margin-bottom:		1em;
+	color:				white;
+	background-color:	darkred;
+	text-transform:		uppercase;
+	font-weight:		bold;
+}
+A.root {
+	display:			block;
+	border-width:		1px;
+	border-color:		darkred;
+	border-style: 		dashed;
+}
+A.root:hover {
+	border-color:		white;
+}
+
+
+
+/* chapters */
+
+.chapter {
+	margin-top:			2px;
+	color:				#FFFFFF;
+	background-color:	#006699;
+	text-transform:		uppercase;
+	font-weight:		bold;
+}
+A.chapter {
+	display:			block;
+	border-width:		1px;
+	border-color:		#006699;
+	border-style: 		dashed;
+}
+A.chapter:hover {
+	border-color:		white;
+}
+
+
+
+/* paragraphs */
+
+.paragraph {
+	margin-left:		4px;
+	color:				#006699;
+}
+A.paragraph {
+	display:			block;
+	border-width:		1px;
+	border-color:		white;
+	border-style: 		dashed;
+}
+A.paragraph:hover {
+	border-color:		black;
+	color:				black;
+}
+
+
+
+/* files */
+
+.file {
+	min-width:			450px;
+	line-height: 		50px;
+	background-color:	#CCCCCC;
+	font-variant:		small-caps;
+	font-weight:		bold;
+	font-style:			normal;
+	text-decoration:	none;
+	border-width:		2px;
+	border-color:		lightgray;
+	border-style:		outset;
+}
+.file .path {
+}
+.file .author {
+	float:				right;
+	width:				200px;
+}
+.comment {
+	font-weight:		normal;
+	font-style:			normal;
+	text-decoration:	none;
+	margin-left:		4px;
+	height:				2em;
+}
+
+
+
+/* buttons */
+
+.button {
+	padding-left:		4px;
+	padding-right:		4px;
+	font-family:		Tahoma, Times new roman;
+	color:				black;
+}
+A.button:hover {
+	background-color:	buttonface;
+}
