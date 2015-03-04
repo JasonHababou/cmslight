@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Télécoms et Réseaux TWN</title>
+	<title>TÃ©lÃ©coms et RÃ©seaux TWN</title>
 	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
 	<style type="text/css" media="all">
 	#container {
@@ -42,12 +42,12 @@
 ?>
 <body>
 <table id="container" cellspacing="5" align="center">
-	BONJOUTTTTJZJIFJZIJFI
+	BONJOUR
 	<tr>
 		<td colspan="2" height="100">
 			<table width="100%" border="0" cellpadding="0" cellspacing="0">
 			<tr>
-				<td class="menu_cell" valign="middle">&nbsp;&nbsp;<img src="images/logo.png" alt="Télécoms et Réseaux TWN" /></td>
+				<td class="menu_cell" valign="middle">&nbsp;&nbsp;<img src="images/logo.png" alt="TÃ©lÃ©coms et RÃ©seaux TWN" /></td>
 <?php if (isset($_SESSION['admin_mode'])) { ?>
 				<td width="25%" class="menu_cell" align="center" valign="bottom"><a target="frameContents" href="manage/password.php5">Config</a></td>
 <?php } ?>
@@ -68,7 +68,7 @@
 </table>
 <center>
 <div id="footer" align="center">
-	<b>Site réalisé par Cyril Gantin</b>
+	<b>Site rÃ©alisÃ© par Cyril Gantin</b>
 </div>
 </center>
 </body>
