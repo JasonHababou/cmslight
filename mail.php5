@@ -92,7 +92,7 @@
 		<td><textarea name="message" onfocus="textbox_focused(this)" onblur="textbox_blurred(this)"></textarea></td>
 	</tr>
 	<tr>
-		<td style="text-align:right"><input type="submit" value="Expédier" style="width:80px; background:#006699; color:white" /></td>
+		<td style="text-align:right"><input type="submit" value="Exp?dier" style="width:80px; background:#006699; color:white" /></td>
 	</tr>
 	</table>
 	</form>

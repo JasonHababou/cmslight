@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/accueil.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/contents/accueil/accueil.html" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/contents/accueil/index.html" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/css/index.html" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/download.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/images/index.html" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/includes/c_file.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/includes/c_node.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/includes/c_root.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/includes/c_section.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/includes/globals.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/includes/index.html" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/index.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/login.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/mail.php5" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/manage/add_file.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/accueil.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/admin_disconnect.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/edit_file.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/edit_section.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/include.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/index.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/move_down.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/move_up.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/password.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/remove_node.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/upload.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/menu.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/menu2.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/setup/index.html" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/show_chapter.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/show_paragraph.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/show_root.php5" charset="ISO-8859-1" />
   </component>
 </project>

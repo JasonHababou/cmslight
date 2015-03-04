@@ -1,5 +1,5 @@
 <?php
-	require("setup/setup_php.php5");
+	require('setup/setup_php.php5');
 	require('includes/globals.php5');
 
 	if (!$_GET['f']) {
@@ -7,7 +7,7 @@
 	}
 	$fnode = node::get_node_by_id($_GET['f']);
 	if ($fnode->AccessDenied()) {
-		die("Vous n'avez pas la permission d'accéder à ce fichier.");
+		die("Vous n'avez pas la permission d'accéder ? ce fichier.");
 	}
 	
 	$fname = $fnode->path();

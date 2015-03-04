@@ -1,16 +1,16 @@
 <?php
 	session_start();
-error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);	
-	require('setup/setup_php.php5');
+error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
+    require('setup/setup_php.php5');
 	require('includes/globals.php5');
 
 	if (!$chapter	= node::get_node_by_id($_GET['chapter'])) die;
-	if (!$paragraph	= node::get_node_by_id($_GET['paragraph']))	die;
+	if (!$paragraph	= node::get_node_by_id($_GET['paragraph'])) die;
 	if ($chapter->AccessDenied()) {
 		die();
 	}
 	if ($paragraph->AccessDenied()) {
-		header('Location: /login.php5');
+		header('Location: login.php5');
 	}
 ?>
 <html>
@@ -23,13 +23,13 @@ error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
 	echo build_path($chapter, $paragraph);
 	echo '</div>';
 
-	$_SESSION['chapter'] = $chapter->id();
-	$_SESSION['paragraph'] = $paragraph->id();
+	$_SESSION['chapter']		= $chapter->id();
+	$_SESSION['paragraph']	= $paragraph->id();
 
 	$chapter_id = $chapter->id();
 	$paragraph_id = $paragraph->id();
 	if ($file = $paragraph->child_node()) do {
-		
+
 		$file_id = $file->id();
 ?>
 		<a href="download.php5?f=<?= $file_id ?>">
@@ -44,7 +44,7 @@ error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
 				</div>
 			</div>
 		</a>
-<?php 
+<?php
 		if (isset($_SESSION['admin_mode'])) {
 			echo "<div style='float:left; margin-right:1.3em;'>";
 			echo "<a class='button' title='' href='manage/move_down.php5?id=$file_id'>&darr;</a>";

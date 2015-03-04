@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cmslight.iml" filepath="$PROJECT_DIR$/.idea/cmslight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cmslightV02.iml" filepath="$PROJECT_DIR$/.idea/cmslightV02.iml" />
     </modules>
   </component>
 </project>

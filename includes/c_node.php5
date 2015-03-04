@@ -77,7 +77,7 @@ abstract class node {
 	}
 
 	public function child_node($bypass=false) {
-		if (!$bypass && $this->permissions && $this->login != isset($_SESSION['login'])) {
+		if (!$bypass && $this->permissions && $this->login != $_SESSION['login']) {
 			return null;
 		}
 		return self::get_node_by_id($this->childnode);

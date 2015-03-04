@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require("setup/setup_php.php5");
+	require('setup/setup_php.php5');
 	require('includes/globals.php5');
 
 	if (isset($_POST['login'])) {

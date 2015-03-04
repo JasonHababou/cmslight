@@ -1,8 +1,9 @@
+
 <?php
 	include("../setup/setup_php.php5");
 	
 	$filename = "../contents/accueil/accueil.html";
-	$text = $_POST['text'];
+	if (isset($_POST['text'])) $text = $_POST['text'];
 	if (isset($text)) {
 		$text = str_replace("\'", "'", $text);
 		$text = str_replace('\"', '"', $text);
@@ -40,7 +41,6 @@
 	<input type="submit" value="Enregistrer" />
 </td></tr>
 </form>
-
 </center>
 </table>
 </body>

@@ -1,5 +1,6 @@
 <?php
 	session_start();
+error_reporting(E_ALL ^ E_DEPRECATED);
 	require('setup/setup_php.php5');
 	require('includes/globals.php5');
 

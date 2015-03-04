@@ -6,7 +6,7 @@ class file extends node {
 	private $comment;
 
 	//
-	// hï¿½ritage
+	// héritage
 	//
 	protected function init() {
 		$id = $this->content_id();

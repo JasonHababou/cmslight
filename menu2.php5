@@ -11,10 +11,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </head>
 <body style="margin:1px; padding:0px;">
 <?php
-	require("setup/setup_php.php5");
-	require("includes/globals.php5");
+	require('setup/setup_php.php5');
+	require('includes/globals.php5');
 	
-	if ($_SESSION[admin_mode]) {
+	if (isset($_SESSION['admin_mode'])) {
 		echo '<a class="root" target="frameContents" href="show_root.php5">RACINE</a>';
 	}
 	
