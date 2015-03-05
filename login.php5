@@ -27,7 +27,7 @@
 <form method="post" action="#" style="margin:0px;padding:0px;text-align:right">
 <table border="0" cellspacing="0" cellpadding="4" style="border:1px black solid; margin-top:160px" align="center">
 <tr>
-	<td colspan="2" style="background:#006699; color:white; font-weight:bold">Accés réservé</td>
+	<td colspan="2" style="background:#006699; color:white; font-weight:bold">Acces reserve</td>
 </tr>
 <tr>
 	<td>login : </td>
