@@ -6,7 +6,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 
 	if (!$chapter = node::get_node_by_id($_GET['chapter']))	die;
 	if ($chapter->AccessDenied()) {
-		header('Location: login.php5');
+		header('Location:login.php5');
 	}
 ?>
 
