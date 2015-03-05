@@ -20,9 +20,11 @@ abstract class node {
 	protected  function __construct() {}
 	abstract protected function init();
 
+	//recuperer l'id du nod par le type root.
 	public static function get_root_node() {
 		return self::get_node_by_sql_condition("contenttype='".TYPE_ROOT."'");
 	}
+
 
 	public static function get_node_by_id($id) {
 		if ($id == "" || $id == NODE_NONE) {
@@ -60,6 +62,8 @@ abstract class node {
 		return $n;
 	}
 
+
+// afficher l'id de la table Nodes par une condition.
 	public static function get_node_by_sql_condition($condition) {
 		return self::get_node_by_id(sql_query_single_value("SELECT id FROM nodes WHERE $condition"));
 	}
