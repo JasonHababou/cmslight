@@ -25,13 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.php5" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php5" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php5">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02" vertical-offset="0" max-vertical-offset="884">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="884">
               <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
               <folding>
                 <marker date="1425541352060" expanded="true" signature="241:307" placeholder="SELECT id FR..permissions..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download.php5" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/download.php5">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="850">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <marker date="1425544223576" expanded="true" signature="819:969" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -46,7 +58,6 @@
         <option value="$PROJECT_DIR$/show_paragraph.php5" />
         <option value="$PROJECT_DIR$/menu2.php5" />
         <option value="$PROJECT_DIR$/mail.php5" />
-        <option value="$PROJECT_DIR$/download.php5" />
         <option value="$PROJECT_DIR$/accueil.php5" />
         <option value="$PROJECT_DIR$/manage/password.php5" />
         <option value="$PROJECT_DIR$/manage/remove_node.php5" />
@@ -74,6 +85,7 @@
         <option value="$PROJECT_DIR$/index.php5" />
         <option value="$PROJECT_DIR$/show_chapter.php5" />
         <option value="$PROJECT_DIR$/login.php5" />
+        <option value="$PROJECT_DIR$/download.php5" />
       </list>
     </option>
   </component>
@@ -411,13 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download.php5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38" vertical-offset="0" max-vertical-offset="850">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accueil.php5">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08" vertical-offset="0" max-vertical-offset="850">
@@ -623,10 +628,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php5">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02" vertical-offset="0" max-vertical-offset="884">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="884">
           <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding>
             <marker date="1425541352060" expanded="true" signature="241:307" placeholder="SELECT id FR..permissions..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download.php5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="850">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <marker date="1425544223576" expanded="true" signature="819:969" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

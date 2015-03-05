@@ -7,7 +7,7 @@
 	}
 	$fnode = node::get_node_by_id($_GET['f']);
 	if ($fnode->AccessDenied()) {
-		die("Vous n'avez pas la permission d'accéder ? ce fichier.");
+		die("Vous n'avez pas la permission d'accéder à ce fichier.");
 	}
 	
 	$fname = $fnode->path();
