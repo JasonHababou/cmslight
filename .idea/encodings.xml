@@ -17,6 +17,8 @@
     <file url="file://$PROJECT_DIR$/login.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/mail.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/accueil.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/add_file.php5" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/manage/add_section.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/admin_disconnect.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/edit_file.php5" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/manage/edit_section.php5" charset="ISO-8859-1" />

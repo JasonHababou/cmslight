@@ -3,7 +3,7 @@
 <head><link type="text/css" rel="stylesheet" href="../css/default.css"></head>
 <body>
 <?php
-	require("include.php5");
+	require('include.php5');
 //echo "$parent $id";echo '<br>';var_dump(node);
 	extract($_POST);	
 	//import_request_variables("GP", "p_");

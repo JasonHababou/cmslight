@@ -3,7 +3,7 @@
 <head><link type="text/css" rel="stylesheet" href="../css/default.css"></head>
 <body>
 <?php
-	require("include.php5");
+	require('include.php5');
 
 	extract($_REQUEST);
 	
@@ -16,19 +16,19 @@
 	echo build_path(node::get_node_by_id($chapter), $parent)."ajouter un fichier";
 	echo '</div>';
 
-	if (isset($_FILES[file])) {
-		$filename = trim(basename($_FILES[file][name]));
+	if (isset($_FILES['file'])) {
+		$filename = trim(basename($_FILES['file']['name']));
 		$filepath = '../contents/'.$filename;
 		if (!strlen($filename)) {
-			echo '<font color="red">Pas de fichier spécifié.</font>';
-		} elseif (strlen($filename) > $GLOBALS[doc_maxpath]) {
+			echo '<font color="red">Pas de fichier sp?cifi?.</font>';
+		} elseif (strlen($filename) > $GLOBALS['doc_maxpath']) {
 			echo '<font color="red">Nom de fichier trop long.</font>';
 		} elseif (file_exists($filepath)) {
-			echo '<font color="red">Le fichier existe déjà.</font>';
-		} elseif ($_FILES[file][error]
-			|| $_FILES[file][size] == 0
-			|| !move_uploaded_file($_FILES[file][tmp_name], $filepath)) {
-			echo '<font color="red">Envoi de fichier échoué.</font>';
+			echo '<font color="red">Le fichier existe d?j?.</font>';
+		} elseif ($_FILES['file']['error']
+			|| $_FILES['file']['size'] == 0
+			|| !move_uploaded_file($_FILES['file']['tmp_name'], $filepath)) {
+			echo '<font color="red">Envoi de fichier ?chou?.</font>';
 		} else {
 			sql_query("INSERT INTO files(path, author, comment) VALUES('$filename','$author','$comment')");
 			$parent->spawn_child(TYPE_FILE, mysql_insert_id());
@@ -43,7 +43,7 @@
 	<input type="hidden" name="chapter" value=<?php echo $chapter; ?>>
 	<table>
 		<tr><td colspan="2" align="right">
-		<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $GLOBALS[doc_maxsize]*1024; ?>" />
+		<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $GLOBALS['doc_maxsize']*1024; ?>" />
 		<input type="file" name="file" />
 		</td></tr>
 		<tr><td width="100">
