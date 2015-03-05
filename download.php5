@@ -17,7 +17,7 @@
 	}
 
 	preg_match('/\.(.*)$/', $fname, $match);
-	$fext = strtolower($match[1]);
+	$fext = strtolower($match['1']);
 	if ($fext == 'pdf') {
 		header('Content-type: application/pdf');
 	} else {
