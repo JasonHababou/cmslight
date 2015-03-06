@@ -60,7 +60,7 @@
 
 <?php if (isset($_SESSION['admin_mode'])) { ?>
 	<br/>
-	<form method="post" action="manage/add_section.php5">
+	<form method="post" action="manage/sessionprive.php5">
 		<input type="hidden" name="id" value="<?php echo $root->id(); ?>" />
 		<input type="submit" value="Ajouter un chapitre" />
 	</form>

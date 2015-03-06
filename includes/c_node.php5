@@ -216,6 +216,21 @@ abstract class node {
 			sql_query("UPDATE nodes SET permissions=$this->permissions WHERE id=$this->childnode");
 		}
 	}
+
+	public static function passwordGenerate()
+	{
+
+		$characts    = 'abcdefghijklmnopqrstuvwxyz';
+		$characts   .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$characts   .= '1234567890';
+		$code_aleatoire      = '';
+
+		for($i=0;$i < 8;$i++)    //10 est le nombre de caractères
+		{
+			$code_aleatoire .= substr($characts,rand()%(strlen($characts)),1);
+		}
+		return $code_aleatoire;
+	}
 }
 
 ?>

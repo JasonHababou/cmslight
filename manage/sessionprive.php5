@@ -1,73 +1,80 @@
-<?php
-	session_start();
-error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
-    require('setup/setup_php.php5');
-	require('includes/globals.php5');
-
-	if (!$chapter	= node::get_node_by_id($_GET['chapter'])) die;
-	if (!$paragraph	= node::get_node_by_id($_GET['paragraph'])) die;
-	if ($chapter->AccessDenied()) {
-        die();
-    }
-	if ($paragraph->AccessDenied()) {
-        header('Location: login.php5');
-    }
-?>
+<?php session_start(); ?>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="css/default.css">
+    <link type="text/css" rel="stylesheet" href="../css/default.css">
 </head>
 <body>
 <?php
-echo '<div class="nav_path">';
-echo build_path($chapter, $paragraph);
-echo '</div>';
+require('include.php5');
+echo "$parent $id";echo '<br>';var_dump(node);
+extract($_POST);
+var_dump($_POST);
 
-$_SESSION['chapter']		= $chapter->id();
-$_SESSION['paragraph']	= $paragraph->id();
+//import_request_variables("GP", "p_");
+if ($_POST['cbprive'])
+{
+    $login = $_POST['title'];
+    $password=node::passwordGenerate();
 
-$chapter_id = $chapter->id();
-$paragraph_id = $paragraph->id();
-if ($file = $paragraph->child_node()) do {
+}
+if (!$parent = node::get_node_by_id($id)) {
+    die();
+}
 
-    $file_id = $file->id();
-    ?>
-    <a href="download.php5?f=<?= $file_id ?>">
-        <div class="file">
-            <div class="author">
-                <?php if (strlen($file->author())) {
-                    echo "de ".$file->author();
-                } ?>
-            </div>
-            <div class="path">
-                <?php echo $file->path() ?>
-            </div>
-        </div>
-    </a>
-    <?php
-    if (isset($_SESSION['admin_mode'])) {
-        echo "<div style='float:left; margin-right:1.3em;'>";
-        echo "<a class='button' title='' href='manage/move_down.php5?id=$file_id'>&darr;</a>";
-        echo "<a class='button' title='' href='manage/move_up.php5?id=$file_id'>&uarr;</a>";
-        echo "<a class='button' title='Editer' href='manage/edit_file.php5?chapter=$chapter_id&paragraph=$paragraph_id&id=$file_id'>E</a>";
-        echo "<a class='button' title='Supprimer' href='manage/remove_node.php5?chapter=$chapter_id&paragraph=$paragraph_id&id=$file_id'>X</a>";
-        echo "</div>";
+if (strlen($title) != 0) {
+    if ($n = node::get_node_by_id($id)) {
+        sql_query("INSERT INTO sections (title) VALUES('$title')");
+        $n->spawn_child(TYPE_SECTION, mysql_insert_id());
     }
-    echo '<div class="comment">';
-    echo $file->comment();
-    echo '</div>';
-} while($file = $file->next_node());
-?>
+}
 
-<?php if (isset($_SESSION['admin_mode'])) { ?>
-    <br/>
-    <form method="post" action="manage/add_file.php5">
-        <input type="hidden" name="id" value="<?php echo $paragraph->id(); ?>" />
-        <input type="hidden" name="chapter" value="<?php echo $chapter->id(); ?>" />
-        <input type="submit" value="Ajouter un fichier" />
-    </form>
-<?php } ?>
+
+echo '<div class="nav_path">';
+if ($_POST['test']==1)
+{
+
+    echo "Login : ".$login;
+    echo "<br><br>";
+    echo "Mot de passe : ".$password;
+}
+else{
+    echo build_path() . "ajouter un chapitre";
+
+echo '</div>';
+?>
+<form method="post" enctype="multipart/form-data" action="#">
+    <input type="hidden" name="id" value=<?php echo $id; ?>>
+    <input type="hidden" name="ischapter" value=<?php echo $ischapter; ?>>
+    <input type="hidden" name="test" value="1">
+    <table>
+        <tr>
+            <td width="100">
+                Titre :
+            </td>
+            <td>
+                <input type="text" name="title"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td width="100">
+                Rendre le chapitre privé ? :
+            </td>
+            <td>
+                <input type="checkbox" name="cbprive"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <br/>
+                <input type="submit" value="enregistrer"/>
+                <input type="button" value="annuler" onclick="javascript:location='<?php echo build_back_url(); ?>'"/>
+            </td>
+        </tr>
+    </table>
+</form>
 
 </body>
 </html>
-
+<?php } ?>
