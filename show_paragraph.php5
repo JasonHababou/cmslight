@@ -4,6 +4,7 @@ error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
     require('setup/setup_php.php5');
 	require('includes/globals.php5');
 
+
 	if (!$chapter	= node::get_node_by_id($_GET['chapter'])) die;
 	if (!$paragraph	= node::get_node_by_id($_GET['paragraph'])) die;
 	if ($chapter->AccessDenied()) {
@@ -12,6 +13,7 @@ error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
 	if ($paragraph->AccessDenied()) {
 		header('Location: login.php5');
 	}
+
 ?>
 <html>
 <head>

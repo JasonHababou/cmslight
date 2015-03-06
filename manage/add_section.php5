@@ -43,22 +43,6 @@ echo '</div>';
             </td>
         </tr>
         <tr>
-            <td width="100">
-                Auteur :
-            </td>
-            <td>
-                <input type="text" name="author"/>
-            </td>
-        </tr>
-        <tr>
-            <td width="100">
-                Commentaire :
-            </td>
-            <td>
-                <input type="text" name="comment"/>
-            </td>
-        </tr>
-        <tr>
             <td colspan="2" align="right">
                 <br/>
                 <input type="submit" value="enregistrer"/>
