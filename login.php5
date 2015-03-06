@@ -8,7 +8,7 @@
 		$login = $_POST['login'];
 		$password = $_POST['password'];
 		
-		$result = sql_query_single_value(sprintf("SELECT id FROM permissions WHERE password=md5('%s')" , $password));
+		$result = sql_query_single_value(sprintf("SELECT id FROM permissions WHERE login='%s' AND password=md5('%s')", $login, $password));
 		if ($result) {
 			$_SESSION['login'] = $login;
 			echo "<script language='javascript'>location='accueil.php5';parent.frames['frameMenu'].location.reload();</script>";
@@ -30,7 +30,10 @@
 	<td colspan="2" style="background:#006699; color:white; font-weight:bold">Acces reserve</td>
 </tr>
 <tr>
-	<input type="hidden" name="login" id="login" value="manage" />
+	<td>login : </td>
+	<td><input type="text" name="login" id="login" style="width:140px;border:1px solid gray" /></td>
+</tr>
+<tr>
 	<td>password :</td>
 	<td><input type="password" name="password" style="width:140px;border:1px solid gray" /></td>
 </tr>
