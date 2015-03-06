@@ -41,6 +41,7 @@ echo '</div>';
             <td>
                 <input type="text" name="title"/>
             </td>
+
         </tr>
         <tr>
             <td colspan="2" align="right">
