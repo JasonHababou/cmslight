@@ -5,6 +5,7 @@ define("TYPE_SECTION",	1);
 define("TYPE_FILE",		2);
 define("TYPE_ROOT",		0xff);
 
+
 abstract class node {
 	private $id;
 	private $nextnode;
@@ -63,12 +64,46 @@ abstract class node {
 	}
 
 
+
 // afficher l'id de la table Nodes par une condition.
 	public static function get_node_by_sql_condition($condition) {
 		return self::get_node_by_id(sql_query_single_value("SELECT id FROM nodes WHERE $condition"));
 	}
-	
-	
+
+	public static function addPermission($title)
+	{
+		$idPerm = sql_query_single_value("SELECT id FROM permissions WHERE login = '$title'");
+		$idSections=sql_query_single_value("SELECT id FROM sections WHERE title ='$title'");
+		$sql_req="UPDATE nodes set permissions= '$idPerm' WHERE contentid='$idSections'";
+		sql_query($sql_req);
+	}
+
+	public static function passwordGenerate()
+	{
+
+		$characts    = 'abcdefghijklmnopqrstuvwxyz';
+		$characts   .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$characts   .= '1234567890';
+		$code_aleatoire      = '';
+
+		for($i=0;$i < 8;$i++)    //10 est le nombre de caractères
+		{
+			$code_aleatoire .= substr($characts,rand()%(strlen($characts)),1);
+		}
+		return $code_aleatoire;
+	}
+
+	public static function generateLogin ($title,$password)
+
+	{
+		$req_sql="INSERT INTO permissions (login, password) VALUES ('$title',md5('$password'))";
+		//echo "** $req_sql ***";
+		sql_query($req_sql);
+
+	}
+
+
+
 	//
 	// navigation arborescence
 	//
@@ -217,20 +252,7 @@ abstract class node {
 		}
 	}
 
-	public static function passwordGenerate()
-	{
 
-		$characts    = 'abcdefghijklmnopqrstuvwxyz';
-		$characts   .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		$characts   .= '1234567890';
-		$code_aleatoire      = '';
-
-		for($i=0;$i < 8;$i++)    //10 est le nombre de caractères
-		{
-			$code_aleatoire .= substr($characts,rand()%(strlen($characts)),1);
-		}
-		return $code_aleatoire;
-	}
 }
 
 ?>

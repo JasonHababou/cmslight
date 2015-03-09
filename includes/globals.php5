@@ -13,7 +13,7 @@ $doc_maxpath	= 38;
 
 
 function build_path($chapter =NULL, $paragraph =NULL) {
-	$path == "";
+	$path = "";
 
 	if (isset($_SESSION['admin_mode'])==true) {
 		$path .= "<a href=show_root.php5'>RACINE ></a> ";

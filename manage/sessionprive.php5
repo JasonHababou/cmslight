@@ -6,17 +6,12 @@
 <body>
 <?php
 require('include.php5');
-echo "$parent $id";echo '<br>';var_dump(node);
+//echo "$parent $id";echo '<br>';var_dump(node);
 extract($_POST);
-var_dump($_POST);
+
 
 //import_request_variables("GP", "p_");
-if ($_POST['cbprive'])
-{
-    $login = $_POST['title'];
-    $password=node::passwordGenerate();
 
-}
 if (!$parent = node::get_node_by_id($id)) {
     die();
 }
@@ -28,6 +23,14 @@ if (strlen($title) != 0) {
     }
 }
 
+if ($_POST['cbprive'])
+{
+    $login = $_POST['title'];
+    $password=node::passwordGenerate();
+    node::generateLogin($login,$password);
+    node::addPermission($login);
+
+}
 
 echo '<div class="nav_path">';
 if ($_POST['test']==1)
