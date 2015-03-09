@@ -43,7 +43,7 @@
 	<input type="hidden" name="chapter" value=<?php echo $chapter; ?>>
 	<table>
 		<tr><td colspan="2" align="right">
-		<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $GLOBALS['doc_maxsize']*1024; ?>" />
+		<!--<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $GLOBALS['doc_maxsize']*1024; ?>" />-->
 		<input type="file" name="file" />
 		</td></tr>
 		<tr><td width="100">
