@@ -18,7 +18,7 @@
 
 	$n = node::get_node_by_id($id);
 	$chapter	= node::get_node_by_id($chapter);
-//var_dump($chapter);
+ 	//var_dump($chapter);
 	echo '<div class="nav_path">';
 	if ($chapter) {
 		echo build_path($chapter)."éditer paragraphe : ".$n->title();

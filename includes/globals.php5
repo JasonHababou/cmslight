@@ -7,7 +7,7 @@ require('c_node.php5');
 require('c_file.php5');
 require('c_root.php5');
 require('c_section.php5');
-require('../setup/setup_php.php5');
+
 
 $bdd=mysqli_connect($GLOBALS['db_hostname'], $GLOBALS['db_user'], $GLOBALS['db_password'],$GLOBALS['db_database']);
 $doc_maxpath	= 38;
