@@ -30,8 +30,9 @@
 			|| !move_uploaded_file($_FILES['file']['tmp_name'], $filepath)) {
 			echo '<font color="red">Envoi de fichier ?chou?.</font>';
 		} else {
+			global $bdd;
 			sql_query("INSERT INTO files(path, author, comment) VALUES('$filename','$author','$comment')");
-			$parent->spawn_child(TYPE_FILE, mysql_insert_id());
+			$parent->spawn_child(TYPE_FILE, mysqli_insert_id($bdd));
 			go_back();
 			exit();
 		}

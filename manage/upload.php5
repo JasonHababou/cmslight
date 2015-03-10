@@ -18,7 +18,8 @@
 		$q = sprintf("INSERT INTO files(path, author, comment) VALUES('%s','%s','%s')",
 			$_POST['f'], $_POST['author'], $_POST['comment']);
 		sql_query($q);
-		$node->spawn_child(TYPE_FILE, mysql_insert_id());
+		global $bdd;
+		$node->spawn_child(TYPE_FILE, mysqli_insert_id($bdd));
 		unlink($src);
 		unset($_POST['f']);
 		unset($_POST['destnode']);

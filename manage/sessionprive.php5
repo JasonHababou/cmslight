@@ -18,8 +18,9 @@ if (!$parent = node::get_node_by_id($id)) {
 
 if (strlen($title) != 0) {
     if ($n = node::get_node_by_id($id)) {
+        global $bdd;
         sql_query("INSERT INTO sections (title) VALUES('$title')");
-        $n->spawn_child(TYPE_SECTION, mysql_insert_id());
+        $n->spawn_child(TYPE_SECTION, mysqli_insert_id($bdd));
     }
 }
 

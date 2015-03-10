@@ -132,8 +132,9 @@ abstract class node {
 	}
 
 	public function spawn_child($contenttype, $contentid) {
+		global $bdd;
 		sql_query("INSERT INTO nodes (contenttype, contentid) VALUES($contenttype, $contentid)");
-		$child = self::get_node_by_id(mysql_insert_id());
+		$child = self::get_node_by_id(mysqli_insert_id($bdd));
 		if ($n = $this->child_node()) {
 			while ($t = $n->next_node()) {
 				$n = $t;								

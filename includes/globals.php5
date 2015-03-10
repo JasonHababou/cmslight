@@ -1,14 +1,15 @@
 <?php
 // Report all errors except E_NOTICE
 // This is the default value set in php.ini
-error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
+//error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 require('c_node.php5');
 require('c_file.php5');
 require('c_root.php5');
 require('c_section.php5');
+require('../setup/setup_php.php5');
 
-
+$bdd=mysqli_connect($GLOBALS['db_hostname'], $GLOBALS['db_user'], $GLOBALS['db_password'],$GLOBALS['db_database']);
 $doc_maxpath	= 38;
 
 
@@ -33,15 +34,15 @@ function build_path($chapter =NULL, $paragraph =NULL) {
 	return $path;
 }
 function sql_query($query) {
-	mysql_connect($GLOBALS['db_hostname'], $GLOBALS['db_user'], $GLOBALS['db_password']);
-	mysql_selectdb($GLOBALS['db_database']);
 
-	return mysql_query($query);
+	global $bdd;
+	return mysqli_query($bdd,$query);
 }
 
 function sql_query_single_line($query) {
 	$res = sql_query($query);
-	return ($res) ? mysql_fetch_array($res) : NULL;
+
+	return ($res) ? mysqli_fetch_array($res) : NULL;
 }
 
 function sql_query_single_value($query) {
