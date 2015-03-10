@@ -1,5 +1,5 @@
 <?php
-	require('include.php5');
+	require('include.php');
 	if ($_SERVER['REQUEST_METHOD'] == "POST" && $_POST['destnode']) {
 		if (($node = node::get_node_by_id($_POST['destnode'])) == null) {
 			die("Paragraphe inexistant.");
@@ -7,10 +7,10 @@
 		$src = sprintf("../upload/%s", $_POST['f']);
 		$dest = sprintf("../contents/%s", $_POST['f']);
 		if (!file_exists($src)) {
-			die("Impossible d'accéder au fichier à copier.");
+			die("Impossible d'accï¿½der au fichier ï¿½ copier.");
 		}
 		if (file_exists($dest)) {
-			die("Le fichier existe déjà.");
+			die("Le fichier existe dï¿½jï¿½.");
 		}
 		if (!copy($src, $dest)) {
 			die("Echec de copie.");
@@ -74,7 +74,7 @@
 	<p>Taille : <?php echo round(filesize("../upload/".$f)/1024) ?> ko</p>
 	<p><label for="author">Auteur</label><input id="author" type="text" name="author" value="<?php echo $_POST['author'] ?>"></p>
 	<p><label for="comment">Commentaire</label><input id="comment" type="text" name="comment" value="<?php echo $_POST['comment'] ?>"></p>
-	<p><label for="destnode">Déplacer vers</label>
+	<p><label for="destnode">Dï¿½placer vers</label>
 		<select id="destnode" name="destnode">
 		<option></option>
 <?php
@@ -87,7 +87,7 @@
 ?>
 		</select>
 	</p>
-	<p id="submit"><input type="submit" value="Insérer le fichier"></p>
+	<p id="submit"><input type="submit" value="Insï¿½rer le fichier"></p>
 	</fieldset>
 	</form>
 </body>

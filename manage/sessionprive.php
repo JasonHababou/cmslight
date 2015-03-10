@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-require('include.php5');
+require('include.php');
 //echo "$parent $id";echo '<br>';var_dump(node);
 extract($_POST);
 
@@ -44,12 +44,12 @@ if ($_POST['test']==1)
         echo "Mot de passe : " . $password;
 
         echo "<script type='text/javascript'>\n";
-        echo "parent.frameMenu.window.location = '../menu.php5';\n";
+        echo "parent.frameMenu.window.location = '../menu.php';\n";
         echo "</script>\n";
         ?>
         <br>
         <br>
-        <input type="button" value="Retour" onclick="parent.frameContents.window.location = '../show_root.php5'"/>
+        <input type="button" value="Retour" onclick="parent.frameContents.window.location = '../show_root.php'"/>
         <?php
     }
     else{
@@ -79,7 +79,7 @@ echo '</div>';
         </tr>
         <tr>
             <td width="100">
-                Rendre le chapitre privé ? :
+                Rendre le chapitre privï¿½ ? :
             </td>
             <td>
                 <input type="checkbox" name="cbprive"/>

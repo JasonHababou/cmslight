@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require('include.php5');
+	require('include.php');
 
 	extract($_GET);
 	//import_request_variables("GP", "p_");

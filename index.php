@@ -9,7 +9,7 @@ if(isset($_GET['logout']))
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Télécoms et Réseaux TWN</title>
+	<title>Tï¿½lï¿½coms et Rï¿½seaux TWN</title>
 	<link rel="stylesheet" type="text/css" href="css/default.css" media="all" />
 	<style type="text/css" media="all">
 	#container {
@@ -43,11 +43,11 @@ if(isset($_GET['logout']))
 </head>
 <?php
 
-$accueil_path = "accueil.php5";
+$accueil_path = "accueil.php";
 
 if (isset($_SESSION['admin_mode']))	
 	if (($_SESSION['admin_mode'])==true)	
-		$accueil_path = "manage/accueil.php5";
+		$accueil_path = "manage/accueil.php";
 
 ?>
 <body>
@@ -59,21 +59,21 @@ if (isset($_SESSION['admin_mode']))
 			<tr>
 				<td class="menu_cell" valign="middle">&nbsp;&nbsp;<img src="images/logo.png" alt="T?l?coms et R?seaux TWN" /></td>
 <?php if (!isset($_SESSION['admin_mode'])) { ?>
-				<td width="25%" class="menu_cell" align="center" valign="bottom"><a target="frameContents" href="manage/password.php5">Identification</a></td>
+				<td width="25%" class="menu_cell" align="center" valign="bottom"><a target="frameContents" href="manage/password.php">Identification</a></td>
 <?php } ?>				
 <?php if (isset($_SESSION['admin_mode'])) { ?>
-				<td width="25%" class="menu_cell" align="center" valign="bottom"><a href="index.php5?logout">Déconnexion</a></td>
+				<td width="25%" class="menu_cell" align="center" valign="bottom"><a href="index.php?logout">Dï¿½connexion</a></td>
 <?php } ?>
 
 				<td width="25%" class="menu_cell" align="center" valign="bottom"><a target="frameContents" href="<?= $accueil_path ?>">Accueil</a></td>
-				<td width="25%" class="menu_cell" align="center" valign="bottom"><a href="mail.php5" target="frameContents">Mail</a><a href="mail.php5" target="frameContents"><img src="images/mail.jpg" alt="mail" /></a></td>
+				<td width="25%" class="menu_cell" align="center" valign="bottom"><a href="mail.php" target="frameContents">Mail</a><a href="mail.php" target="frameContents"><img src="images/mail.jpg" alt="mail" /></a></td>
 			</tr>
 			</table>
 		</td>
 	</tr>
 	<tr>
 		<td width="300" height="450">
-			<iframe name="frameMenu" src="menu.php5" width="100%" height="100%" frameborder="0"></iframe>
+			<iframe name="frameMenu" src="menu.php" width="100%" height="100%" frameborder="0"></iframe>
 		</td>
 		<td width="600" height="450">
 			<iframe name="frameContents" src="<?php echo $accueil_path ?>" width="100%" height="100%" frameborder="0"></iframe>
@@ -82,7 +82,7 @@ if (isset($_SESSION['admin_mode']))
 </table>
 <center>
 <div id="footer" align="center">
-	<b>Site réalisé par Cyril Gantin</b>
+	<b>Site rï¿½alisï¿½ par Cyril Gantin</b>
 </div>
 </center>
 </body>

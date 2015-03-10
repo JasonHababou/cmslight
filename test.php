@@ -1,6 +1,6 @@
 <?php
-require('setup/setup_php.php5');
-require('includes/globals.php5');
+require('setup/setup_php.php');
+require('includes/globals.php');
 $password=node::passwordGenerate();
 echo $password;
 

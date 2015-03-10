@@ -1,13 +1,13 @@
 <?php
-	require('setup/setup_php.php5');
-	require('includes/globals.php5');
+	require('setup/setup_php.php');
+	require('includes/globals.php');
 
 	if (!$_GET['f']) {
 		die("Dying: file name not specified.");
 	}
 	$fnode = node::get_node_by_id($_GET['f']);
 	if ($fnode->AccessDenied()) {
-		die("Vous n'avez pas la permission d'accéder à ce fichier.");
+		die("Vous n'avez pas la permission d'accï¿½der ï¿½ ce fichier.");
 	}
 	
 	$fname = $fnode->path();

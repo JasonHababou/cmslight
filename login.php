@@ -1,8 +1,8 @@
 <?php
 //test
 	session_start();
-	require('setup/setup_php.php5');
-	require('includes/globals.php5');
+	require('setup/setup_php.php');
+	require('includes/globals.php');
 
 	if (isset($_POST['login'])) {
 		$login = $_POST['login'];
@@ -12,7 +12,7 @@
 			$result = sql_query_single_value(sprintf("SELECT id FROM permissions WHERE login='%s' AND password=md5('%s')", $login, $password));
 			if ($result) {
 				$_SESSION['login'] = $login;
-				echo "<script language='javascript'>location='accueil.php5';parent.frames['frameMenu'].location.reload();</script>";
+				echo "<script language='javascript'>location='accueil.php';parent.frames['frameMenu'].location.reload();</script>";
 				die();
 			}
 

@@ -3,7 +3,7 @@
 <head><link type="text/css" rel="stylesheet" href="../css/default.css"></head>
 <body>
 <?php
-	require('include.php5');
+	require('include.php');
 
 	extract($_REQUEST);
 	//import_request_variables("GP", "p_");
@@ -22,7 +22,7 @@
 	$paragraph	= node::get_node_by_id($paragraph);
 
 	echo '<div class="nav_path">';
-	echo build_path($chapter, $paragraph)."éditer ".$n->path();
+	echo build_path($chapter, $paragraph)."ï¿½diter ".$n->path();
 	echo '</div>';
 ?>
 

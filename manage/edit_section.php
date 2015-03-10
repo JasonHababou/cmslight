@@ -3,7 +3,7 @@
 <head><link type="text/css" rel="stylesheet" href="../css/default.css"></head>
 <body>
 <?php
-	require('include.php5');
+	require('include.php');
 	extract($_REQUEST);
 	//import_request_variables("GP", "p_");
 
@@ -21,9 +21,9 @@
  	//var_dump($chapter);
 	echo '<div class="nav_path">';
 	if ($chapter) {
-		echo build_path($chapter)."éditer paragraphe : ".$n->title();
+		echo build_path($chapter)."ï¿½diter paragraphe : ".$n->title();
 	} else {
-		echo build_path()."éditer chapitre : ".$n->title();
+		echo build_path()."ï¿½diter chapitre : ".$n->title();
 	}
 	echo '</div>';
 ?>

@@ -6,8 +6,8 @@
 </head>
 <body onload="document.getElementById('login').focus();">
 <?php
-	require('../setup/setup_php.php5');
-	require('../includes/globals.php5');
+	require('../setup/setup_php.php');
+	require('../includes/globals.php');
 
 	if (isset($_POST['login'])) {
 		$login = $_POST['login'];
@@ -17,7 +17,7 @@
 			if($password=='twn2006')
 			{
 			$_SESSION['admin_mode']=true;
-			$chemin = 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/../index.php5';
+			$chemin = 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/../index.php';
 			// Redirection du parent si login ok
 			echo "<script>
 			window.parent.location = '$chemin';

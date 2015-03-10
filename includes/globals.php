@@ -3,10 +3,10 @@
 // This is the default value set in php.ini
 //error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
-require('c_node.php5');
-require('c_file.php5');
-require('c_root.php5');
-require('c_section.php5');
+require('c_node.php');
+require('c_file.php');
+require('c_root.php');
+require('c_section.php');
 
 
 $bdd=mysqli_connect($GLOBALS['db_hostname'], $GLOBALS['db_user'], $GLOBALS['db_password'],$GLOBALS['db_database']);
@@ -17,15 +17,15 @@ function build_path($chapter =NULL, $paragraph =NULL) {
 	$path = "";
 
 	if (isset($_SESSION['admin_mode'])==true) {
-		$path .= "<a href=show_root.php5'>RACINE ></a> ";
+		$path .= "<a href=show_root.php'>RACINE ></a> ";
 	}
 	if ($chapter && $chapter->type() == TYPE_SECTION) {
-		$path .= "<a href=show_chapter.php5?chapter=".$chapter->id().">";
+		$path .= "<a href=show_chapter.php?chapter=".$chapter->id().">";
 		$path .= $chapter->title()." >";
 		$path .= "</a>" ;
 
 		if ($paragraph && $paragraph->type() == TYPE_SECTION) {
-			$path .= "<a href=show_paragraph.php5?chapter=".$chapter->id()."&paragraph=".$paragraph->id().">";
+			$path .= "<a href=show_paragraph.php?chapter=".$chapter->id()."&paragraph=".$paragraph->id().">";
 			$path .= $paragraph->title()." >";
 			$path .= "</a>" ;
 		}

@@ -1,6 +1,6 @@
 <?php
-	require('setup/setup_php.php5');
-	require('includes/globals.php5');
+	require('setup/setup_php.php');
+	require('includes/globals.php');
 	
 	extract($_POST);
 	if (isset($message) && strlen($message)
@@ -9,7 +9,7 @@
 		mail('telecomsetreseauxtwn@free.fr', $subject, $message, sprintf("From: %s", $from));
 		header('Content-type: text/html');
 		printf('<html><head><link type="text/css" rel="stylesheet" href="css/default.css"></head>');
-		printf('<body>Message envoyé</body></html>');
+		printf('<body>Message envoyï¿½</body></html>');
 		die();
 	}
 ?>

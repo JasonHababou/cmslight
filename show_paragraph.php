@@ -1,8 +1,8 @@
 <?php
 	session_start();
 //error_reporting(E_ALL ^ E_DEPRECATED  ^ E_NOTICE);
-    require('setup/setup_php.php5');
-	require('includes/globals.php5');
+    require('setup/setup_php.php');
+	require('includes/globals.php');
 
 
 	if (!$chapter	= node::get_node_by_id($_GET['chapter'])) die;
@@ -11,7 +11,7 @@
 		die();
 	}
 	if ($paragraph->AccessDenied()) {
-		header('Location: login.php5');
+		header('Location: login.php');
 	}
 
 ?>
@@ -34,7 +34,7 @@
 
 		$file_id = $file->id();
 ?>
-		<a href="download.php5?f=<?= $file_id ?>">
+		<a href="download.php?f=<?= $file_id ?>">
 			<div class="file">
 				<div class="author">
 					<?php if (strlen($file->author())) {
@@ -49,10 +49,10 @@
 <?php
 		if (isset($_SESSION['admin_mode'])) {
 			echo "<div style='float:left; margin-right:1.3em;'>";
-			echo "<a class='button' title='' href='manage/move_down.php5?id=$file_id'>&darr;</a>";
-			echo "<a class='button' title='' href='manage/move_up.php5?id=$file_id'>&uarr;</a>";
-			echo "<a class='button' title='Editer' href='manage/edit_file.php5?chapter=$chapter_id&paragraph=$paragraph_id&id=$file_id'>E</a>";
-			echo "<a class='button' title='Supprimer' href='manage/remove_node.php5?chapter=$chapter_id&paragraph=$paragraph_id&id=$file_id'>X</a>";
+			echo "<a class='button' title='' href='manage/move_down.php?id=$file_id'>&darr;</a>";
+			echo "<a class='button' title='' href='manage/move_up.php?id=$file_id'>&uarr;</a>";
+			echo "<a class='button' title='Editer' href='manage/edit_file.php?chapter=$chapter_id&paragraph=$paragraph_id&id=$file_id'>E</a>";
+			echo "<a class='button' title='Supprimer' href='manage/remove_node.php?chapter=$chapter_id&paragraph=$paragraph_id&id=$file_id'>X</a>";
 			echo "</div>";
 		}
 		echo '<div class="comment">';
@@ -63,7 +63,7 @@
 
 <?php if (isset($_SESSION['admin_mode'])) { ?>
 	<br/>
-	<form method="post" action="manage/add_file.php5">
+	<form method="post" action="manage/add_file.php">
 		<input type="hidden" name="id" value="<?php echo $paragraph->id(); ?>" />
 		<input type="hidden" name="chapter" value="<?php echo $chapter->id(); ?>" />
 		<input type="submit" value="Ajouter un fichier" />
