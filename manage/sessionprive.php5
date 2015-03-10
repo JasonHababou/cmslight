@@ -33,15 +33,32 @@ if ($_POST['cbprive'])
 }
 
 echo '<div class="nav_path">';
+
 if ($_POST['test']==1)
 {
+    if($_POST['cbprive']) {
 
-    echo "Login : ".$login;
-    echo "<br><br>";
-    echo "Mot de passe : ".$password;
+        echo "Login : " . $login;
+        echo "<br><br>";
+        echo "Mot de passe : " . $password;
+
+        echo "<script type='text/javascript'>\n";
+        echo "parent.frameMenu.window.location = '../menu.php5';\n";
+        echo "</script>\n";
+        ?>
+        <br>
+        <br>
+        <input type="button" value="Retour" onclick="parent.frameContents.window.location = '../show_root.php5'"/>
+        <?php
+    }
+    else{
+        go_back();
+    }
 }
 else{
     echo build_path() . "ajouter un chapitre";
+
+
 
 echo '</div>';
 ?>
@@ -71,7 +88,7 @@ echo '</div>';
         <tr>
             <td colspan="2" align="right">
                 <br/>
-                <input type="submit" value="enregistrer"/>
+                <input type="submit" value="enregistrer" />
                 <input type="button" value="annuler" onclick="javascript:location='<?php echo build_back_url(); ?>'"/>
             </td>
         </tr>
