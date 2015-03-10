@@ -8,8 +8,8 @@
 	extract($_REQUEST);
 	//import_request_variables("GP", "p_");
 
-	$author		= trim($author);
-	$comment	= trim($comment);
+	$author		= trim(isset($author));
+	$comment	= trim(isset($comment));
 
 	if (isset($contentid)) {
 		sql_query("UPDATE files SET author='$author', comment='$comment' WHERE id='$contentid'");

@@ -1,6 +1,6 @@
 
 <?php
-	include("../setup/setup_php.php5");
+	include("../setup/setup_php.php");
 	
 	$filename = "../contents/accueil/accueil.html";
 	if (isset($_POST['text'])) $text = $_POST['text'];

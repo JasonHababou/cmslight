@@ -7,7 +7,7 @@
 	extract($_REQUEST);
 	//import_request_variables("GP", "p_");
 
-	$title	= trim($_POST['title']);
+	$title	= trim(isset($_POST['title']));
 
 	if (isset($contentid) && strlen($title) != 0) {
 	//die("UPDATE sections SET title='$title' WHERE id=$contentid");
