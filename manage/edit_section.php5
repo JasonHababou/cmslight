@@ -30,7 +30,7 @@
 
 <form method="post" action="#">
 	<input type="hidden" name="contentid" value=<?php echo $n->content_id(); ?>>
-	<input type="hidden" name="chapter" value="<?php  echo $chapter->title(); ?>">
+	<input type="hidden" name="chapter" value="<?php  echo $n->title(); ?>">
 	<table>
 		<tr><td width="100">
 			Titre :

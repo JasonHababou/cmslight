@@ -16,7 +16,7 @@ function build_back_url() {
 
 function go_back() {
 	echo "<script language='javascript'>location='".build_back_url()."';parent.frames['frameMenu'].location.reload();</script>";
-
+	die();
 }
 
 ?>
