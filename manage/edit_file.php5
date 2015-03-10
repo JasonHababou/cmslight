@@ -5,20 +5,21 @@
 <?php
 	require('include.php5');
 
-	import_request_variables("GP", "p_");
+	extract($_REQUEST);
+	//import_request_variables("GP", "p_");
 
-	$author		= trim($p_author);
-	$comment	= trim($p_comment);
+	$author		= trim($author);
+	$comment	= trim($comment);
 
-	if (isset($p_contentid)) {
-		sql_query("UPDATE files SET author='$author', comment='$comment' WHERE id=$p_contentid");
+	if (isset($contentid)) {
+		sql_query("UPDATE files SET author='$author', comment='$comment' WHERE id='$contentid'");
 		go_back();
 		exit();
 	}
 
-	$n			= node::get_node_by_id($p_id);
-	$chapter	= node::get_node_by_id($p_chapter);
-	$paragraph	= node::get_node_by_id($p_paragraph);
+	$n			= node::get_node_by_id($id);
+	$chapter	= node::get_node_by_id($chapter);
+	$paragraph	= node::get_node_by_id($paragraph);
 
 	echo '<div class="nav_path">';
 	echo build_path($chapter, $paragraph)."éditer ".$n->path();

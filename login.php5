@@ -7,13 +7,15 @@
 	if (isset($_POST['login'])) {
 		$login = $_POST['login'];
 		$password = $_POST['password'];
-		
-		$result = sql_query_single_value(sprintf("SELECT id FROM permissions WHERE login='%s' AND password=md5('%s')", $login, $password));
-		if ($result) {
-			$_SESSION['login'] = $login;
-			echo "<script language='javascript'>location='accueil.php5';parent.frames['frameMenu'].location.reload();</script>";
-			die();
-		}
+		//if(($login == $_POST['login'] || $login == 'manage') && ($password == $_POST['password'] || $password == 'twn2006'))
+
+			$result = sql_query_single_value(sprintf("SELECT id FROM permissions WHERE login='%s' AND password=md5('%s')", $login, $password));
+			if ($result ) {
+				$_SESSION['login'] = $login;
+				echo "<script language='javascript'>location='accueil.php5';parent.frames['frameMenu'].location.reload();</script>";
+				die();
+			}
+
 		$login = null;
 		$password = null;
 	}
