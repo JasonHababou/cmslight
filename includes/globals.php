@@ -49,7 +49,7 @@ function sql_query_single_value($query) {
 	if (!$data = sql_query_single_line($query)) {
 		return NULL;
 	}
-	return $data[0];
+	return $data['0'];
 }
 
 ?>

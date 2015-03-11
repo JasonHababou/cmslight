@@ -21,7 +21,7 @@
 		break;
 	}
 	
-	if ($confirm) {
+	if (isset($confirm)) {
 		$n->remove_node();
 		go_back();
 		exit();

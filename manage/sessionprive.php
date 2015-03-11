@@ -8,7 +8,7 @@
 require('include.php');
 //echo "$parent $id";echo '<br>';var_dump(node);
 extract($_POST);
-
+$title = $_POST['title'];
 
 //import_request_variables("GP", "p_");
 
@@ -16,7 +16,7 @@ if (!$parent = node::get_node_by_id($id)) {
     die();
 }
 
-if (strlen($title) != 0) {
+if (strlen($title) != 0 ) {
     if ($n = node::get_node_by_id($id)) {
         global $bdd;
         sql_query("INSERT INTO sections (title) VALUES('$title')");
@@ -24,18 +24,17 @@ if (strlen($title) != 0) {
     }
 }
 
-if ($_POST['cbprive'])
+if (isset($_POST['cbprive']))
 {
     $login = $_POST['title'];
     $password=node::passwordGenerate();
     node::generateLogin($login,$password);
     node::addPermission($login);
-
 }
 
 echo '<div class="nav_path">';
 
-if ($_POST['test']==1)
+if (isset($_POST['test'])==1)
 {
     if($_POST['cbprive']) {
 
@@ -58,8 +57,6 @@ if ($_POST['test']==1)
 }
 else{
     echo build_path() . "ajouter un chapitre";
-
-
 
 echo '</div>';
 ?>
